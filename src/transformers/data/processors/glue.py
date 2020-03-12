@@ -515,6 +515,8 @@ class WnliProcessor(DataProcessor):
             examples.append(InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
         return examples
 
+import json
+
 class BoolqProcessor(DataProcessor):
     """Processor for the BoolQ data set (GLUE version)."""
 
