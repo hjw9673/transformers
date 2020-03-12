@@ -14,7 +14,7 @@ module load gcc/6.3.0
 NETID=jh6926
 source activate /scratch/${NETID}/nlu/env
 
-DATA_DIR=/scratch/${NETID}/nlu/BoolQ
+DATA_DIR=/scratch/${NETID}/nlu/BoolQ/
 TASK_NAME=boolq
 
 cd /scratch/${NETID}/nlu/code/transformers
