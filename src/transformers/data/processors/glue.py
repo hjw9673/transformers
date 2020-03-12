@@ -76,6 +76,8 @@ def glue_convert_examples_to_features(
             output_mode = glue_output_modes[task]
             logger.info("Using output mode %s for task %s" % (output_mode, task))
 
+    print("task is not none")
+
     label_map = {label: i for i, label in enumerate(label_list)}
 
     features = []
@@ -136,6 +138,8 @@ def glue_convert_examples_to_features(
                 input_ids=input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids, label=label
             )
         )
+
+    print("is_tf_available")
 
     if is_tf_available() and is_tf_dataset:
 

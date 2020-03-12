@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #SBATCH --gres=gpu:1
-#SBATCH --mem=32000
+#SBATCH --mem=16000
 #SBATCH --time=0:30:00
 #SBATCH --job-name="nlu_hw4"
 
@@ -27,8 +27,8 @@ python ./examples/run_glue.py \
     --do_eval \
     --data_dir ${DATA_DIR} \
     --max_seq_length=128 \
-    --per_gpu_eval_batch_size=8 \
-    --per_gpu_train_batch_size=8 \
+    --per_gpu_eval_batch_size=3 \
+    --per_gpu_train_batch_size=3 \
     --learning_rate 2e-5 \
     --num_train_epoch 3.0 \
     --output_dir /scratch/${NETID}/nlu/${TASK_NAME}_run/
