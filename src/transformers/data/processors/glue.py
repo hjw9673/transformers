@@ -558,11 +558,13 @@ class BoolqProcessor(DataProcessor):
             if i == 0:
                 continue
             guid = "%s-%s" % (set_type, line[0])
-            text_a = line[1]
-            text_b = line[2]
-            label = line[-1]
-            examples.append(InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
-        return examples
+            print(line)
+            print(line[1], line[2], line[-1])
+        #     text_a = line[1]
+        #     text_b = line[2]
+        #     label = line[-1]
+        #     examples.append(InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
+        # return examples
 
 glue_tasks_num_labels = {
     "cola": 2,
