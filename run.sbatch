@@ -21,7 +21,7 @@ cd /scratch/${NETID}/nlu/code/transformers
 export PYTHONPATH=/scratch/${NETID}/nlu/code/transformers/src:$PYTHONPATH
 python ./examples/run_glue.py \
     --model_type roberta \
-    --model_name_or_path roberta-base
+    --model_name_or_path roberta-base \
     --task_name ${TASK_NAME} \
     --do_train \
     --do_eval \
