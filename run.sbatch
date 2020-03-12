@@ -25,7 +25,7 @@ python ./examples/run_glue.py \
     --task_name ${TASK_NAME} \
     --do_train \
     --do_eval \
-    --data_dir ${GLUE_DIR} \
+    --data_dir ${DATA_DIR} \
     --max_seq_length 128 \
     --per_gpu_eval_batch_size=8 \
     --per_gpu_train_batch_size=8 \
