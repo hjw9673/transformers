@@ -531,7 +531,10 @@ class BoolqProcessor(DataProcessor):
 
     def get_train_examples(self, data_dir):
         """See base class."""
-        return self._create_examples(json.loads(os.path.join(data_dir, "train.jsonl")), "train")
+        path = os.path.join(data_dir, 'train.jsonl')
+        print(path)
+        print(json.loads(path))
+        #return self._create_examples(json.loads(os.path.join(data_dir, "train.jsonl")), "train")
 
     def get_dev_examples(self, data_dir):
         """See base class."""
