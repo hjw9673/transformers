@@ -531,11 +531,11 @@ class BoolqProcessor(DataProcessor):
 
     def get_train_examples(self, data_dir):
         """See base class."""
-        return self._create_examples(json.loads(os.path.join(data_dir, "train.jsonl")), "train")
+        return self._create_examples(json.load(os.path.join(data_dir, "train.jsonl")), "train")
 
     def get_dev_examples(self, data_dir):
         """See base class."""
-        return self._create_examples(json.loads(os.path.join(data_dir, "val.jsonl")), "dev")
+        return self._create_examples(json.load(os.path.join(data_dir, "val.jsonl")), "dev")
 
     def get_labels(self):
         """See base class."""
@@ -548,9 +548,9 @@ class BoolqProcessor(DataProcessor):
             if i == 0:
                 continue
             guid = "%s-%s" % (set_type, line[0])
-            text_a = line['question']
-            text_b = line['passage']
-            label = line['label']
+            text_a = line[1]
+            text_b = line[2]
+            label = line[-1]
             examples.append(InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
         return examples
 
