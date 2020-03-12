@@ -560,6 +560,7 @@ class BoolqProcessor(DataProcessor):
             guid = "%s-%s" % (set_type, line[0])
             print(line)
             print(line[1], line[2], line[-1])
+            break
         #     text_a = line[1]
         #     text_b = line[2]
         #     label = line[-1]
