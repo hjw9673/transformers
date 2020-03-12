@@ -533,8 +533,11 @@ class BoolqProcessor(DataProcessor):
         """See base class."""
         filepath = os.path.join(data_dir, 'train.jsonl')
         with open(filepath, 'r') as file:
-            data = json.load(file)
-            print(data[0])
+            line = file.readline()
+            while line:
+                data = json.loads(line)
+                print(data)
+                break
         #return self._create_examples(json.loads(os.path.join(data_dir, "train.jsonl")), "train")
 
     def get_dev_examples(self, data_dir):
