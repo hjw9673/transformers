@@ -557,12 +557,14 @@ class BoolqProcessor(DataProcessor):
         """Creates examples for the training and dev sets."""
         examples = []
         for line in enumerate(lines):
-            guid = "%s-%s" % (set_type, line[0])
-            text_a = line[1]
-            text_b = line[2]
-            label = line[-1]
-            examples.append(InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
-        return examples
+            print(line)
+            # guid = "%s-%s" % (set_type, line[0])
+            # text_a = line[1]
+            # text_b = line[2]
+            # label = line[-1]
+            # examples.append(InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
+            break
+        #return examples
 
 glue_tasks_num_labels = {
     "cola": 2,
