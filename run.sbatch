@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #SBATCH --gres=gpu:1
-#SBATCH --mem=16000
+#SBATCH --mem=60000
 #SBATCH --time=0:30:00
 #SBATCH --job-name="nlu_hw4"
 
