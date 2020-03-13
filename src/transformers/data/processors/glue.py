@@ -118,8 +118,8 @@ def glue_convert_examples_to_features(
         )
 
         if output_mode == "classification":
-            print(label_map)
-            print(example.label)
+            #print(label_map)
+            #print(example.label)
             label = label_map[example.label]
         elif output_mode == "regression":
             label = float(example.label)
@@ -554,7 +554,7 @@ class BoolqProcessor(DataProcessor):
 
     def get_labels(self):
         """See base class."""
-        return ["false", "true"]
+        return ["False", "True"]
 
     def _create_examples(self, lines, set_type):
         """Creates examples for the training and dev sets."""
