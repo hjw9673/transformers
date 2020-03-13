@@ -32,4 +32,4 @@ python ./examples/run_glue.py \
     --learning_rate 2e-5 \
     --num_train_epoch 3.0 \
     --output_dir /scratch/${NETID}/nlu/${TASK_NAME}_run/ \
-    --seed 1234
+    --seed 42
