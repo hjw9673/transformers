@@ -536,6 +536,7 @@ class BoolqProcessor(DataProcessor):
             line = file.readline()
             while line:
                 data.append(json.loads(line))
+                line = file.readline()
             return self._create_examples(data, "train")
 
     def get_dev_examples(self, data_dir):
@@ -545,6 +546,7 @@ class BoolqProcessor(DataProcessor):
             line = file.readline()
             while line:
                 data.append(json.loads(line))
+                line = file.readline()
             return self._create_examples(data, "dev")
 
     def get_labels(self):
