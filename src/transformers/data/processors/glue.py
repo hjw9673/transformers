@@ -535,6 +535,7 @@ class BoolqProcessor(DataProcessor):
         with open(os.path.join(data_dir, 'train.jsonl'), 'r') as file:
             line = file.readline()
             while line:
+                print(json.loads(line))
                 data.append(json.loads(line))
         return self._create_examples(data, "train")
 
