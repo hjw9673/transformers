@@ -559,9 +559,9 @@ class BoolqProcessor(DataProcessor):
         examples = []
         for (i, line) in enumerate(lines):
             guid = "%s-%s" % (set_type, line["idx"])
-            text_a = line["question"]
-            text_b = line["passage"]
-            label = True if line["label"] == 'true' else False
+            text_a = line["passage"]
+            text_b = line["question"]
+            label = line["label"]
             examples.append(InputExample(guid=guid, text_a=text_a, text_b=text_b, label=label))
         return examples
 
