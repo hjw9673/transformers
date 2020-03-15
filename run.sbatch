@@ -26,9 +26,10 @@ python ./examples/run_glue.py \
     --do_train \
     --do_eval \
     --data_dir ${DATA_DIR} \
-    --max_seq_length=128 \
-    --per_gpu_eval_batch_size=8 \
-    --per_gpu_train_batch_size=8 \
+    --max_seq_length 128 \
+    --per_gpu_eval_batch_size 8 \
+    --per_gpu_train_batch_size 8 \
     --learning_rate 2e-5 \
     --num_train_epoch 3.0 \
-    --output_dir /scratch/${NETID}/nlu/${TASK_NAME}_run/
+    --output_dir /scratch/${NETID}/nlu/${TASK_NAME}_run/ \
+    --seed 1234
