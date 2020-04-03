@@ -14,8 +14,8 @@ module load gcc/6.3.0
 NETID=jh6926
 source activate /scratch/${NETID}/nlu/env
 
-DATA_DIR=/scratch/${NETID}/nlu/BoolQ
-TASK_NAME=boolq
+DATA_DIR=/scratch/${NETID}/nlu/wikitext-103
+TASK_NAME=mnli-mm
 
 cd /scratch/${NETID}/nlu/code/transformers
 export PYTHONPATH=/scratch/${NETID}/nlu/code/transformers/src:$PYTHONPATH
